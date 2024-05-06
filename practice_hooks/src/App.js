@@ -8,6 +8,8 @@ import ThemeButton from "./Components/ContextConsumer/ThemeButton";
 import ThemeContainer from "./Components/ThemeContainer";
 import Memohook from "./Components/UseMemohook/memohook";
 import ParentComp from "./Components/UseCallbackhook/ParentComp";
+import UseRefhook from "./Components/UseRef hook/UseRefhook";
+
 
 const App = () => {
   return (
@@ -21,7 +23,8 @@ const App = () => {
         <ThemeButton />
       </ThemeContextProvider> */}
       {/* <Memohook /> */}
-      <ParentComp />
+      {/* <ParentComp /> */}
+      <UseRefhook />
     </div>
   );
 };
