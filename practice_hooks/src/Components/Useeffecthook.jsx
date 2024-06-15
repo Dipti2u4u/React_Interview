@@ -156,7 +156,7 @@ const Useeffecthook = () => {
 export default Useeffecthook;*/
 
 // import React, { useEffect, useState } from "react";
-// // import axios from "axios";
+// import axios from "axios";
 
 // const Useeffecthook = () => {
 //   const [data, setData] = useState([]);
@@ -175,18 +175,18 @@ export default Useeffecthook;*/
 //   fetchData();
 // }, []);
 
-//   useEffect(()=>{
-//     const fetchData = async () => {
-//       try{
-//         const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-//         const getData = await response.json();
-//         setData(getData)
-//       }catch(error){
-//         console.log("Error is ",error)
-//       }
-//     }
-//     fetchData();
-//   },[])
+//   // useEffect(()=>{
+//   //   const fetchData = async () => {
+//   //     try{
+//   //       const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+//   //       const getData = await response.json();
+//   //       setData(getData)
+//   //     }catch(error){
+//   //       console.log("Error is ",error)
+//   //     }
+//   //   }
+//   //   fetchData();
+//   // },[])
 
 //   return (
 //     <>
@@ -202,33 +202,34 @@ export default Useeffecthook;*/
 
 // export default Useeffecthook;
 
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
 
-const Useeffecthook = () => {
-  const [data, setData] = useState([]);
+// const Useeffecthook = () => {
+//   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("https://api.publicapis.org/entries");
-        setData(response.data.entries);
-      } catch (error) {
-        console.log("Error is ", error);
-      }
-    };
-    fetchData();
-  }, []);
-  return (
-    <>
-      <h2>Dtat fetching from the url</h2>
-      <ul>
-        {data.map((item) => (
-          <li key={item.id}>{item.API}</li>
-        ))}
-      </ul>
-    </>
-  );
-};
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const response = await axios.get("https://api.publicapis.org/entries");
+//         setData(response.data.entries);
+//       } catch (error) {
+//         console.log("Error is ", error);
+//       }
+//     };
+//     fetchData();
+//   }, []);
+//   return (
+//     <>
+//       <h2>Dtat fetching from the url</h2>
+//       <ul>
+//         {data.map((item) => (
+//           <li key={item.id}>{item.API}</li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// };
 
-export default Useeffecthook;
+// export default Useeffecthook;
+

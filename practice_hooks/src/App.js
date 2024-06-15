@@ -14,17 +14,17 @@ import UseRefhook from "./Components/UseRef hook/UseRefhook";
 const App = () => {
   return (
     <div>
-      {/* <Usestatehook />
-      <Useeffecthook />
-      <Parent />
-      <Jeje /> */}
+       {/* <Usestatehook /> */}
+      {/* <Useeffecthook /> */}
+      {/* <Parent />
+      <Jeje />  */}
       {/* <ThemeContextProvider>
         <ThemeContainer />
         <ThemeButton />
       </ThemeContextProvider> */}
       {/* <Memohook /> */}
-      {/* <ParentComp /> */}
-      <UseRefhook />
+      <ParentComp />
+      {/* <UseRefhook /> */}
     </div>
   );
 };

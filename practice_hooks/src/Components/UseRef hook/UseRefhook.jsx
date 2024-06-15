@@ -19,7 +19,7 @@
 
 // export default UseRefhook;
 
-/* Accessing DOM Elements Imperatively */
+/*--------------- Accessing DOM Elements Imperatively---------------- */
 
 // import React, { useRef } from 'react';
 
@@ -40,57 +40,54 @@
 
 // export default MyComponent;
 
-/* Preserving Mutable Values Without Causing Re-renders: */
+/* ----------Preserving Mutable Values Without Causing Re-renders:------ */
 
-/*import React, { useRef } from "react";
+// import React, { useRef } from "react";
 
-const UseRefhook = () => {
+// const UseRefhook = () => {
 
-  const counterRef = useRef(0)
+//   const counterRef = useRef(0)
 
-  const handleClick = () => {
-    // counterRef.current = counterRef +1 
-    counterRef.current += 1;
-    console.log(counterRef.current)
-  };
+//   const handleClick = () => {
+//     counterRef.current = counterRef +1 
+//     // counterRef.current += 1;
+//     // console.log(counterRef.current)
+//   };
 
-  return (
-    <>
-    <p>{counterRef.current}</p>
-      <button onClick={handleClick}>Increment</button>
-    </>
-  );
-};
+//   return (
+//     <>
+//     <p>{counterRef.current}</p>
+//       <button onClick={handleClick}>Increment</button>
+//     </>
+//   );
+// };
 
-export default UseRefhook;*/
+// export default UseRefhook;
 
+// import React, { useRef, useEffect } from "react";
 
+// const TimerExample = () => {
+//   const intervalRef = useRef(null);
+//   const secondsRef = useRef(0);
 
+//   useEffect(() => {
+//     intervalRef.current = setInterval(() => {
+//       secondsRef.current += 1;
+//       console.log("Elapsed time:", secondsRef.current, "seconds");
+//     }, 1000);
 
-import React, { useRef, useEffect } from "react";
+//     return () => clearInterval(intervalRef.current);
+//   }, []);
 
-const TimerExample = () => {
-  const intervalRef = useRef(null);
-  const secondsRef = useRef(0);
+//   return (
+//     <div>
+//       <h2>Timer (useRef)</h2>
+//       <p>Elapsed time: {secondsRef.current} seconds</p>
+//       <button onClick={() => clearInterval(intervalRef.current)}>
+//         Stop Timer
+//       </button>
+//     </div>
+//   );
+// };
 
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      secondsRef.current += 1;
-      console.log("Elapsed time:", secondsRef.current, "seconds");
-    }, 1000);
-
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
-  return (
-    <div>
-      <h2>Timer (useRef)</h2>
-      <p>Elapsed time: {secondsRef.current} seconds</p>
-      <button onClick={() => clearInterval(intervalRef.current)}>
-        Stop Timer
-      </button>
-    </div>
-  );
-};
-
-export default TimerExample;
+// export default TimerExample;
