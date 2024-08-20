@@ -9,7 +9,10 @@ import ThemeContainer from "./Components/ThemeContainer";
 import Memohook from "./Components/UseMemohook/memohook";
 import ParentComp from "./Components/UseCallbackhook/ParentComp";
 import UseRefhook from "./Components/UseRef hook/UseRefhook";
-
+import Validation from "./Components/FormValidation/Validation";
+import Reducerhook from "./Components/Reducer/Reducerhook";
+import { MessageProvider } from "./Components/NewContext/Context";
+import Consumer_One from "./Components/NewContext/Consumer_One";
 
 const App = () => {
   return (
@@ -23,8 +26,13 @@ const App = () => {
         <ThemeButton />
       </ThemeContextProvider> */}
       {/* <Memohook /> */}
-      <ParentComp />
+      {/* <ParentComp /> */}
       {/* <UseRefhook /> */}
+      {/* <Validation /> */}
+      {/* <Reducerhook /> */}
+      <MessageProvider>
+        <Consumer_One />
+      </MessageProvider>
     </div>
   );
 };

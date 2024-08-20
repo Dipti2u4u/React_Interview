@@ -91,3 +91,92 @@
 // };
 
 // export default TimerExample;
+
+
+
+// import React, { useRef, useState } from 'react';
+
+// function ClickCounter() {
+//   const countRef = useRef(0);
+//   const [renderCount, setRenderCount] = useState(0);
+
+//   console.log('component is rendering')
+
+//   const handleClick = () => {
+//     countRef.current += 1; // This does not cause a re-render
+//     console.log('countRef.current:', countRef.current);
+//     setRenderCount(renderCount + 1); // This triggers a re-render
+//   };
+
+//   return (
+//     <div>
+//       <p>Button clicked: {countRef.current} times</p>
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// export default ClickCounter;
+
+
+
+
+
+/* -------------Uncontrolled component -------------------*/
+// import React,{useRef} from 'react'
+
+// const UseRefhook = () => {
+//     const inputRef = useRef(null)
+//     const handleSubmit = (e)=>{
+//         e.preventDefault()
+//         alert(`input value is ${inputRef.current.value}`)
+//     }
+//   return (
+//     <>
+//         <form onSubmit={handleSubmit}>
+//             <label>Uncontrolled Component</label><br />
+//             <input 
+//             type = 'text' 
+//             placeholder='enter text'
+//             ref = {inputRef}
+//             />
+//             <button>Submit</button>
+//         </form>
+//     </>
+//   )
+// }
+
+// export default UseRefhook
+
+
+
+/*----------------Controlled Component ----------------*/
+import React, { useState } from 'react'
+
+const UseRefhook = () => {
+    const [inputValue,setInputvalue] = useState('')
+
+    const handleChange = (e)=>{
+        setInputvalue(e.target.value)
+    }
+
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        alert(`input value is ${inputValue}`)
+    }
+  return (
+    <>
+        <form onSubmit={handleSubmit}>
+            <input 
+            type='text' 
+            value={inputValue} 
+            onChange={handleChange}
+            />
+            <button>Submit</button>
+        </form>
+        <p>Entered value is : {inputValue}</p>
+    </>
+  )
+}
+
+export default UseRefhook
